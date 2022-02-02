@@ -1,6 +1,6 @@
 # commands
 
-## Vue 3 LATEST
+## Vue 3 CLI
 ```bash
 npm init vue@latest
 ```
