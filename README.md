@@ -1,11 +1,11 @@
-# commands
+# Web useful Commands
 
-## Vue 3 CLI
+### Vue 3 CLI
 ```bash
 npm init vue@latest
 ```
 
-## NextJS with TypeScript & TailwindCSS
+### NextJS with TypeScript & TailwindCSS
 ```bash
 npx create-next-app --example with-tailwindcss <project name>
 ```
