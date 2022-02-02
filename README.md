@@ -4,5 +4,5 @@
 
 ## NextJS with TailwindCSS
 ```bash
-npx create-next-app --example with-tailwindcss vapor
+npx create-next-app --example with-tailwindcss <project name>
 ```
