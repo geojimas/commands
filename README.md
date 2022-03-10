@@ -9,3 +9,20 @@ npm init vue@latest
 ```bash
 npx create-next-app --example with-tailwindcss <project name>
 ```
+
+### Prettier
+ ```json
+ {
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "proseWrap": "always"
+}
+```
