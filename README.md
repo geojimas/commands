@@ -26,3 +26,27 @@ npx create-next-app --example with-tailwindcss <project name>
   "proseWrap": "always"
 }
 ```
+
+### Netlify redirects: netlify.toml
+```shell
+
+[build.environment]
+  # bypass npm auto install
+  NPM_FLAGS = "--version"
+  NODE_VERSION = "16"
+
+[build]
+  publish = "dist"
+  command = "npm install && npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+```
