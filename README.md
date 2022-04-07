@@ -7,7 +7,7 @@ npm init vue@latest
 
 ### NextJS with TypeScript & TailwindCSS
 ```bash
-npx create-next-app --example with-tailwindcss <project name>
+npx create-next-app --ts --example with-tailwindcss <project name>
 ```
 
 ### Prettier
