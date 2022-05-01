@@ -10,6 +10,14 @@ npm init vue@latest
 npx create-next-app@latest --ts --example with-tailwindcss <project name>
 ```
 
+### Setup ESLint
+```bash
+npm install eslint --save-dev
+```
+```bash
+npm init @eslint/config
+```
+
 ### Prettier
  ```json
  {
