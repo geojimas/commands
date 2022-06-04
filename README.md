@@ -17,6 +17,13 @@ npm install -D eslint
 ```bash
 npm init @eslint/config
 ```
+#### usefull eslint rules
+```json
+"rules": {
+    "react/prop-types": "off",
+    "space-before-function-paren": ["error", "never"]
+  }
+```
 
 ### Prettier
  ```json
