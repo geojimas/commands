@@ -12,7 +12,7 @@ npx create-next-app@latest --ts --example with-tailwindcss <project name>
 
 ### Setup ESLint
 ```bash
-npm install eslint --save-dev
+npm install -D eslint
 ```
 ```bash
 npm init @eslint/config
