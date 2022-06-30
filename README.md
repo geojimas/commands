@@ -1,6 +1,6 @@
 # Web useful Commands
 
-### Vue 3 CLI
+### Vue 3 CLI with Vite by Default
 ```bash
 npm init vue@latest
 ```
@@ -8,6 +8,11 @@ npm init vue@latest
 ### NextJS with TypeScript & TailwindCSS
 ```bash
 npx create-next-app@latest --ts --example with-tailwindcss <project name>
+```
+
+### Vite Project Starter
+```bash
+npm create vite@latest
 ```
 
 ### Setup ESLint
