@@ -27,9 +27,8 @@ npm init @eslint/config
 "rules": {
     "react/prop-types": "off",
     "space-before-function-paren": ["error", "never"]
-    "react/react-in-jsx-scope": "off",  // suppress errors for missing 'import React' in files
-     // allow jsx syntax in js files (for next.js project)
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
+    "react/react-in-jsx-scope": "off",  // suppress errors for missing 'import React' in files && 
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ."ts", ".tsx", ".jsx"] }], //allow jsx syntax in js files (for next.js project)
   }
 ```
 
