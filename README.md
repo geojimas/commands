@@ -10,6 +10,14 @@ npm init vue@latest
 npx create-next-app@latest --ts --example with-tailwindcss <project name>
 ```
 
+### NuxtJS 3
+#### under tsconfig.json file
+```json
+"compilerOptions": {
+    "jsx": "preserve"
+  }
+```
+
 ### Vite Project Starter
 ```bash
 npm create vite@latest
