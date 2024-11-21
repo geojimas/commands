@@ -1,11 +1,6 @@
 # Web useful Commands
 
-### Vue 3 CLI with Vite by Default
-```bash
-pnpm create vue@latest
-```
-
-### React with Vite
+### Init Project with Vite for Every Framework
 ```bash
 pnpm create vite
 ```
@@ -85,6 +80,47 @@ export default [{
 }]
 
 ```
+### Setup Eslint new Way for Vue & Vite 
+// eslint.config.js file
+```javascript
+import pluginJs from '@eslint/js'; // Import the JavaScript plugin for ESLint
+import pluginVue from 'eslint-plugin-vue'; // Import the Vue.js plugin for ESLint
+import globals from 'globals'; // Import global variables definitions (like `window` or `document`)
+
+export default [
+  { files: ['**/*.{js,mjs,cjs,ts,vue}'] }, // Define which files should be linted by ESLint
+  { languageOptions: { globals: globals.browser } }, // Specify language options, including global variables for browser environments
+  pluginJs.configs.recommended, // Apply the recommended configuration from the JavaScript plugin
+  ...pluginVue.configs['flat/recommended'], // Spread the recommended configuration from the Vue plugin for Vue 3
+  {
+    files: ['**/*.vue'], // Specify additional configuration for `.vue` files
+  },
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off', // Disable the rule that requires multi-word component names in Vue
+      // Additional Vue 3 specific rules
+      'vue/component-api-style': ['error', ['script-setup', 'composition']], // Enforce specific API style for Vue components
+      'vue/component-name-in-template-casing': ['error', 'PascalCase'], // Enforce PascalCase for component names in templates
+      'vue/component-options-name-casing': ['error', 'PascalCase'], // Enforce PascalCase for component option names
+      'vue/custom-event-name-casing': ['error', 'camelCase'], // Enforce camelCase for custom event names
+      'vue/define-emits-declaration': ['error', 'type-based'], // Enforce type-based declarations for emits
+      'vue/define-props-declaration': ['error', 'type-based'], // Enforce type-based declarations for props
+      'vue/no-deprecated-slot-attribute': 'error', // Disallow the use of deprecated `slot` attribute
+      'vue/no-deprecated-v-on-native-modifier': 'error', // Disallow the use of deprecated `v-on: native` modifier
+      'vue/no-setup-props-destructure': 'error', // Disallow destructuring of props in setup function
+      'vue/no-unused-refs': 'error', // Disallow unused template refs
+      'vue/prefer-import-from-vue': 'error', // Prefer importing from Vue directly
+      'vue/require-explicit-emits': 'error', // Require explicit emits declarations
+      'vue/script-indent': ['error', 2, { baseIndent: 1 }], // Enforce consistent indentation for script tags
+      'vue/v-on-event-hyphenation': ['error', 'always', { autofix: true }], // Enforce hyphenation for event names in templates
+      'vue/valid-define-props': 'error', // Ensure props definitions are valid
+      'vue/valid-v-memo': 'error' // Ensure usage of valid v-memo directive
+    }
+  }
+];
+
+```
+
 ### Prettier (Not Needed Anymore)
  ```json
  {
@@ -100,7 +136,23 @@ export default [{
   "arrowParens": "avoid",
   "proseWrap": "always"
 }
+```
 
+### Vscode Format on Save
+// create ".vscode" folder and then create settings.json file
+```json
+{
+    "eslint.validate": ["vue", "javascript", "typescript"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always",
+        "source.fixAll.stylelint": "always"
+    },
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    }
+}
 ```
 
 ### Netlify redirects: netlify.toml
